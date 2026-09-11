@@ -14,17 +14,15 @@ class Rule:
 
     def note(self):
         while True:
-            guess = input("글자를 입력하세요: ")
+            guess = input("글자를 입력하세요 : ")
             guess = guess.lower() 
             
             if len(guess) != 1:
                 self.one()
                 continue
-            
             if not guess.isalpha():
                 self.alpha_only()
                 continue
-
             if guess in self.guess_list:
                 self.duplication()
                 continue
